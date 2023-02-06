@@ -1,0 +1,31 @@
+{
+  "name": "scilone/tiko-php-sdk",
+  "description": "Unofficial PHP SDK for Tiko devices",
+  "keywords": ["tiko","sdk"],
+  "homepage": "https://github.com/scilone/tiko-php-sdk",
+  "minimum-stability": "stable",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Nicolas Nobre",
+      "email": "nicolas.nobre91@gmail.com"
+    }
+  ],
+  "require": {
+    "php": "^7.4",
+    "ext-json": "*",
+    "guzzlehttp/guzzle": "^7.4",
+    "psr/http-message": "^1.0",
+    "symfony/http-foundation": "^5.4"
+  },
+  "autoload": {
+    "psr-4": {
+      "Scilone\\TikoSDK\\": "src/"
+    }
+  },
+  "extra": {
+    "branch-alias": {
+      "dev-master": "1.0.x-dev"
+    }
+  }
+}
