@@ -2,6 +2,8 @@
 
 namespace Scilone\TikoSDK\Infrastructure;
 
+use DateTimeInterface;
+
 trait SelfJsonSerializableTrait
 {
     public function jsonSerialize(): array
