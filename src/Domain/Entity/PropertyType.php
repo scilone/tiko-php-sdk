@@ -53,7 +53,7 @@ class PropertyType implements \JsonSerializable
     private $setting = null;
     private ?bool $isDecentralised = null;
     private ?bool $hasMbox = null;
-    private ?object $valueProposition = null;
+    private ?array $valueProposition = null;
     private ?bool $contribution = null;
     private ?PropertySelfConsumptionSettingsType $selfConsumptionSettings = null;
     private ?PropertyProductionType $production = null;
@@ -554,12 +554,12 @@ class PropertyType implements \JsonSerializable
         return $this;
     }
 
-    public function getValueProposition(): ?object
+    public function getValueProposition(): ?array
     {
         return $this->valueProposition;
     }
 
-    public function setValueProposition(?object $valueProposition): self
+    public function setValueProposition(?array $valueProposition): self
     {
         $this->valueProposition = $valueProposition;
 
