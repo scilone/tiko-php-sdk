@@ -2,8 +2,12 @@
 
 namespace Scilone\TikoSDK\Domain\Entity;
 
-class ValueProposition
+use Scilone\TikoSDK\Infrastructure\SelfJsonSerializableTrait;
+
+class ValueProposition implements \JsonSerializable
 {
+    use SelfJsonSerializableTrait;
+
     private ?bool $alarming = null;
     private ?bool $ecoMode = null;
     private ?bool $contribution = null;

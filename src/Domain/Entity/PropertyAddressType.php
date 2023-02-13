@@ -2,8 +2,12 @@
 
 namespace Scilone\TikoSDK\Domain\Entity;
 
-class PropertyAddressType
+use Scilone\TikoSDK\Infrastructure\SelfJsonSerializableTrait;
+
+class PropertyAddressType implements \JsonSerializable
 {
+    use SelfJsonSerializableTrait;
+
     private ?int $id = null;
     private $street = null;
     private $number = null;

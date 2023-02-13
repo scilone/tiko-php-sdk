@@ -2,8 +2,12 @@
 
 namespace Scilone\TikoSDK\Domain\Entity;
 
-class TipType
+use Scilone\TikoSDK\Infrastructure\SelfJsonSerializableTrait;
+
+class TipType implements \JsonSerializable
 {
+    use SelfJsonSerializableTrait;
+
     private ?int $id = null;
     private ?string $tip = null;
 

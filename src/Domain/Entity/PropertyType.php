@@ -2,8 +2,12 @@
 
 namespace Scilone\TikoSDK\Domain\Entity;
 
-class PropertyType
+use Scilone\TikoSDK\Infrastructure\SelfJsonSerializableTrait;
+
+class PropertyType implements \JsonSerializable
 {
+    use SelfJsonSerializableTrait;
+
     private ?FastConsumptionSummaryType $fastConsumption = null;
     private ?Co2SavingsType $co2Savings = null;
     private ?FaqType $faq = null;

@@ -2,8 +2,12 @@
 
 namespace Scilone\TikoSDK\Domain\Entity;
 
-class SavingsType
+use Scilone\TikoSDK\Infrastructure\SelfJsonSerializableTrait;
+
+class SavingsType implements \JsonSerializable
 {
+    use SelfJsonSerializableTrait;
+
     private ?float $ecomode = null;
     private ?float $photovoltaic = null;
     private ?float $tariff = null;

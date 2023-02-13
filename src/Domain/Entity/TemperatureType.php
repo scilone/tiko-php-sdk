@@ -2,8 +2,12 @@
 
 namespace Scilone\TikoSDK\Domain\Entity;
 
-class TemperatureType
+use Scilone\TikoSDK\Infrastructure\SelfJsonSerializableTrait;
+
+class TemperatureType implements \JsonSerializable
 {
+    use SelfJsonSerializableTrait;
+
     private $averageExternalTemperature = null;
     private ?int $start = null;
     private ?int $end = null;

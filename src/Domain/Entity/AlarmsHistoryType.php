@@ -2,8 +2,12 @@
 
 namespace Scilone\TikoSDK\Domain\Entity;
 
-class AlarmsHistoryType
+use Scilone\TikoSDK\Infrastructure\SelfJsonSerializableTrait;
+
+class AlarmsHistoryType implements \JsonSerializable
 {
+    use SelfJsonSerializableTrait;
+
     private ?string $id = null;
     private ?int $openDate = null;
     private ?int $closeDate = null;

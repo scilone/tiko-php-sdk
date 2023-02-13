@@ -2,8 +2,13 @@
 
 namespace Scilone\TikoSDK\Domain\Entity;
 
-class AdjustTemperatureType
+use JsonSerializable;
+use Scilone\TikoSDK\Infrastructure\SelfJsonSerializableTrait;
+
+class AdjustTemperatureType implements JsonSerializable
 {
+    use SelfJsonSerializableTrait;
+
     private ?bool $active = null;
     private ?float $temperature = null;
     private ?int $endDateTime = null;

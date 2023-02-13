@@ -2,8 +2,12 @@
 
 namespace Scilone\TikoSDK\Domain\Entity;
 
-class SettingsAuthType
+use Scilone\TikoSDK\Infrastructure\SelfJsonSerializableTrait;
+
+class SettingsAuthType implements \JsonSerializable
 {
+    use SelfJsonSerializableTrait;
+
     private ?bool $isSmsEnabled = null;
 
     public function getIsSmsEnabled(): ?bool

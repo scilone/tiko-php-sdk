@@ -2,8 +2,12 @@
 
 namespace Scilone\TikoSDK\Domain\Entity;
 
-class RoomType
+use Scilone\TikoSDK\Infrastructure\SelfJsonSerializableTrait;
+
+class RoomType implements \JsonSerializable
 {
+    use SelfJsonSerializableTrait;
+
     /** @var ExternalDeviceType[]|null  */
     private ?array $externalDevices = null;
     /** @var DeviceType[]|null  */

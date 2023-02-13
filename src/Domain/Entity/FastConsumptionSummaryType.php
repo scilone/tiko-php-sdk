@@ -2,8 +2,12 @@
 
 namespace Scilone\TikoSDK\Domain\Entity;
 
-class FastConsumptionSummaryType
+use Scilone\TikoSDK\Infrastructure\SelfJsonSerializableTrait;
+
+class FastConsumptionSummaryType implements \JsonSerializable
 {
+    use SelfJsonSerializableTrait;
+
     private ?int $start = null;
     private ?int $end = null;
     private ?float $energyWh = null;

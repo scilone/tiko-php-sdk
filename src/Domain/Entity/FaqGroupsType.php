@@ -2,8 +2,12 @@
 
 namespace Scilone\TikoSDK\Domain\Entity;
 
-class FaqGroupsType
+use Scilone\TikoSDK\Infrastructure\SelfJsonSerializableTrait;
+
+class FaqGroupsType implements \JsonSerializable
 {
+    use SelfJsonSerializableTrait;
+
     private ?int $id = null;
     private ?string $name = null;
     /** @var FaqContentsType[]|null  */

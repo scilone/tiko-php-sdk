@@ -2,8 +2,12 @@
 
 namespace Scilone\TikoSDK\Domain\Entity;
 
-class WeatherPointType
+use Scilone\TikoSDK\Infrastructure\SelfJsonSerializableTrait;
+
+class WeatherPointType implements \JsonSerializable
 {
+    use SelfJsonSerializableTrait;
+
     private ?int $weatherId = null;
     private ?string $description = null;
     private ?string $city = null;

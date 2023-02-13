@@ -2,8 +2,12 @@
 
 namespace Scilone\TikoSDK\Domain\Entity;
 
-class PropertySelfConsumptionSettingsType
+use Scilone\TikoSDK\Infrastructure\SelfJsonSerializableTrait;
+
+class PropertySelfConsumptionSettingsType implements \JsonSerializable
 {
+    use SelfJsonSerializableTrait;
+
     private ?string $photovoltaic = null;
     private ?string $savings = null;
     private ?string $optimisationBoiler = null;

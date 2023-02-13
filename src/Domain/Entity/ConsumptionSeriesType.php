@@ -2,9 +2,12 @@
 
 namespace Scilone\TikoSDK\Domain\Entity;
 
-class ConsumptionSeriesType
+use Scilone\TikoSDK\Infrastructure\SelfJsonSerializableTrait;
+
+class ConsumptionSeriesType implements \JsonSerializable
 {
-    /** @var Int[]|null  */
+    use SelfJsonSerializableTrait;
+
     private ?array $vDisconnected = null;
     /** @var Float[]|null  */
     private ?array $vConsumption = null;

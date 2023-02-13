@@ -2,9 +2,12 @@
 
 namespace Scilone\TikoSDK\Domain\Entity;
 
-class AlarmsType
+use Scilone\TikoSDK\Infrastructure\SelfJsonSerializableTrait;
+
+class AlarmsType implements \JsonSerializable
 {
-    /** @var AlarmsDevicesSettingsType[]|null  */
+    use SelfJsonSerializableTrait;
+
     private ?array $devicesSettings = null;
     /** @var AlarmsSensorsSettingsType[]|null  */
     private ?array $sensorsSettings = null;

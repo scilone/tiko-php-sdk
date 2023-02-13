@@ -2,8 +2,12 @@
 
 namespace Scilone\TikoSDK\Domain\Entity;
 
-class TemperatureSeriesType
+use Scilone\TikoSDK\Infrastructure\SelfJsonSerializableTrait;
+
+class TemperatureSeriesType implements \JsonSerializable
 {
+    use SelfJsonSerializableTrait;
+
     private ?array $vDisconnected = null;
     private ?array $vMeasuredTemperature = null;
     private ?array $vTargetTemperature = null;

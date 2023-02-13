@@ -2,8 +2,12 @@
 
 namespace Scilone\TikoSDK\Domain\Entity;
 
-class SettingsWeatherType
+use Scilone\TikoSDK\Infrastructure\SelfJsonSerializableTrait;
+
+class SettingsWeatherType implements \JsonSerializable
 {
+    use SelfJsonSerializableTrait;
+
     private ?bool $isEnabled = null;
 
     public function getIsEnabled(): ?bool

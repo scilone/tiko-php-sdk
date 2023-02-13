@@ -2,8 +2,12 @@
 
 namespace Scilone\TikoSDK\Domain\Entity;
 
-class SupportSettingsType
+use Scilone\TikoSDK\Infrastructure\SelfJsonSerializableTrait;
+
+class SupportSettingsType implements \JsonSerializable
 {
+    use SelfJsonSerializableTrait;
+
     private ?string $value = null;
     private ?string $label = null;
 

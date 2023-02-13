@@ -2,8 +2,12 @@
 
 namespace Scilone\TikoSDK\Domain\Entity;
 
-class SettingsNotificationsType
+use Scilone\TikoSDK\Infrastructure\SelfJsonSerializableTrait;
+
+class SettingsNotificationsType implements \JsonSerializable
 {
+    use SelfJsonSerializableTrait;
+
     private ?bool $isAppEnabled = null;
     private ?bool $isSmsEnabled = null;
     private ?bool $isEmailEnabled = null;

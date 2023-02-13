@@ -2,8 +2,12 @@
 
 namespace Scilone\TikoSDK\Domain\Entity;
 
-class SettingsMyStromType
+use Scilone\TikoSDK\Infrastructure\SelfJsonSerializableTrait;
+
+class SettingsMyStromType implements \JsonSerializable
 {
+    use SelfJsonSerializableTrait;
+
     private ?bool $isEnabled = null;
     private ?string $redirectUri = null;
     private ?string $linkAccountUrl = null;

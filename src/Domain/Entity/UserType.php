@@ -2,8 +2,12 @@
 
 namespace Scilone\TikoSDK\Domain\Entity;
 
-class UserType
+use Scilone\TikoSDK\Infrastructure\SelfJsonSerializableTrait;
+
+class UserType implements \JsonSerializable
 {
+    use SelfJsonSerializableTrait;
+
     /** @var CampaignType[]|null  */
     private ?array $inbox = null;
     /** @var ExternalDeviceType[]|null  */

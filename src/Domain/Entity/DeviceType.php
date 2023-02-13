@@ -2,8 +2,12 @@
 
 namespace Scilone\TikoSDK\Domain\Entity;
 
-class DeviceType
+use Scilone\TikoSDK\Infrastructure\SelfJsonSerializableTrait;
+
+class DeviceType implements \JsonSerializable
 {
+    use SelfJsonSerializableTrait;
+
     private ?int $id = null;
     private ?string $code = null;
     private ?string $type = null;

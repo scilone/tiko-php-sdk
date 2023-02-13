@@ -2,8 +2,12 @@
 
 namespace Scilone\TikoSDK\Domain\Entity;
 
-class Co2SavingsType
+use Scilone\TikoSDK\Infrastructure\SelfJsonSerializableTrait;
+
+class Co2SavingsType implements \JsonSerializable
 {
+    use SelfJsonSerializableTrait;
+
     private ?float $totalSavingsKg = null;
 
     public function getTotalSavingsKg(): ?float

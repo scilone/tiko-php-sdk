@@ -2,8 +2,12 @@
 
 namespace Scilone\TikoSDK\Domain\Entity;
 
-class RoomStatusType
+use Scilone\TikoSDK\Infrastructure\SelfJsonSerializableTrait;
+
+class RoomStatusType implements \JsonSerializable
 {
+    use SelfJsonSerializableTrait;
+
     private ?bool $disconnected = null;
     private ?bool $heatingOperating = null;
     private $heaterDisconnected = null;

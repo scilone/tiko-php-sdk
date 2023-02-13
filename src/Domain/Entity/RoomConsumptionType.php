@@ -2,8 +2,12 @@
 
 namespace Scilone\TikoSDK\Domain\Entity;
 
-class RoomConsumptionType
+use Scilone\TikoSDK\Infrastructure\SelfJsonSerializableTrait;
+
+class RoomConsumptionType implements \JsonSerializable
 {
+    use SelfJsonSerializableTrait;
+
     private ?int $id = null;
     private ?string $name = null;
     private ?float $energyWh = null;

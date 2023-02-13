@@ -2,11 +2,13 @@
 
 namespace Scilone\TikoSDK\Domain\Entity;
 
-class OptimisationType
+use Scilone\TikoSDK\Infrastructure\SelfJsonSerializableTrait;
+
+class OptimisationType implements \JsonSerializable
 {
-    /** @var DevicePriority[]|null  */
+    use SelfJsonSerializableTrait;
+
     private ?array $devicesPriority = null;
-    /** @var defaultDevicePriority[]|null  */
     private ?array $defaultDevicesPriority = null;
 
     public function getDevicesPriority(): ?array

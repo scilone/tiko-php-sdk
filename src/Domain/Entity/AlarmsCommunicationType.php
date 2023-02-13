@@ -2,8 +2,12 @@
 
 namespace Scilone\TikoSDK\Domain\Entity;
 
-class AlarmsCommunicationType
+use Scilone\TikoSDK\Infrastructure\SelfJsonSerializableTrait;
+
+class AlarmsCommunicationType implements \JsonSerializable
 {
+    use SelfJsonSerializableTrait;
+
     private ?int $id = null;
     private ?bool $notification = null;
     private ?bool $sms = null;

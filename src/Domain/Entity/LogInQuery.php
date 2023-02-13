@@ -2,8 +2,12 @@
 
 namespace Scilone\TikoSDK\Domain\Entity;
 
-class LogInQuery
+use Scilone\TikoSDK\Infrastructure\SelfJsonSerializableTrait;
+
+class LogInQuery implements \JsonSerializable
 {
+    use SelfJsonSerializableTrait;
+
     private ?SettingsType $settings = null;
     private ?UserType $user = null;
     private ?string $token = null;

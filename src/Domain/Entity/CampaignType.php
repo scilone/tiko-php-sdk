@@ -2,8 +2,12 @@
 
 namespace Scilone\TikoSDK\Domain\Entity;
 
-class CampaignType
+use Scilone\TikoSDK\Infrastructure\SelfJsonSerializableTrait;
+
+class CampaignType implements \JsonSerializable
 {
+    use SelfJsonSerializableTrait;
+
     private ?int $id = null;
     private ?int $maxNumberOfSkip = null;
     private ?bool $lockUser = null;

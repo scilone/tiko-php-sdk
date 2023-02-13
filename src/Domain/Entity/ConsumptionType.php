@@ -2,8 +2,12 @@
 
 namespace Scilone\TikoSDK\Domain\Entity;
 
-class ConsumptionType
+use Scilone\TikoSDK\Infrastructure\SelfJsonSerializableTrait;
+
+class ConsumptionType implements \JsonSerializable
 {
+    use SelfJsonSerializableTrait;
+
     private ?string $currency = null;
     private ?float $averageExternalTemperature = null;
     private ?float $cost = null;

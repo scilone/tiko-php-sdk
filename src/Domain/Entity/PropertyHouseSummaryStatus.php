@@ -2,8 +2,12 @@
 
 namespace Scilone\TikoSDK\Domain\Entity;
 
-class PropertyHouseSummaryStatus
+use Scilone\TikoSDK\Infrastructure\SelfJsonSerializableTrait;
+
+class PropertyHouseSummaryStatus implements \JsonSerializable
 {
+    use SelfJsonSerializableTrait;
+
     private ?string $shortOrder = null;
     private ?string $deviceGroup = null;
     private ?string $title = null;

@@ -2,8 +2,12 @@
 
 namespace Scilone\TikoSDK\Domain\Entity;
 
-class PropertyProductionType
+use Scilone\TikoSDK\Infrastructure\SelfJsonSerializableTrait;
+
+class PropertyProductionType implements \JsonSerializable
 {
+    use SelfJsonSerializableTrait;
+
     /** @var string[]|null  */
     private ?array $eligibleDevicesTypes = null;
 
