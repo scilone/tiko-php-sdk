@@ -8,6 +8,7 @@ class AlarmsType implements \JsonSerializable
 {
     use SelfJsonSerializableTrait;
 
+    /** @var AlarmsDevicesSettingsType[]|null  */
     private ?array $devicesSettings = null;
     /** @var AlarmsSensorsSettingsType[]|null  */
     private ?array $sensorsSettings = null;
