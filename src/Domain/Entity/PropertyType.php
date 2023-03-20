@@ -8,6 +8,17 @@ class PropertyType implements \JsonSerializable
 {
     use SelfJsonSerializableTrait;
 
+    public const MODE_BOOST = 'boost';
+    public const MODE_FROST = 'frost';
+    public const MODE_ABSENCE = 'absence';
+    public const MODE_STOP = 'disableHeating';
+    public const MODES = [
+        self::MODE_BOOST,
+        self::MODE_FROST,
+        self::MODE_ABSENCE,
+        self::MODE_STOP,
+    ];
+
     private ?FastConsumptionSummaryType $fastConsumption = null;
     private ?Co2SavingsType $co2Savings = null;
     private ?FaqType $faq = null;
