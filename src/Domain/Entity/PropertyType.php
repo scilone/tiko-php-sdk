@@ -49,8 +49,8 @@ class PropertyType implements \JsonSerializable
     private ?bool $isSinapsiAuthorised = null;
     private ?bool $ownerPermission = null;
     private ?bool $isPhotovoltaic = null;
-    private $mode = null;
-    private $setting = null;
+    private array $mode = [];
+    private array $setting = [];
     private ?bool $isDecentralised = null;
     private ?bool $hasMbox = null;
     private ?array $valueProposition = null;

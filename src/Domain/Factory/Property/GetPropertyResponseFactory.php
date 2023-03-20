@@ -3,13 +3,12 @@
 namespace Scilone\TikoSDK\Domain\Factory\Property;
 
 use Psr\Http\Message\ResponseInterface as PsrResponseInterface;
-use Scilone\TikoSDK\Domain\Entity\PropertyType;
 use Scilone\TikoSDK\Domain\Factory\AbstractResponseFactory;
 use Scilone\TikoSDK\Domain\Response\Property\GetPropertiesResponse;
 use Scilone\TikoSDK\Infrastructure\ResponseException;
 use Scilone\TikoSDK\Infrastructure\ResponseInterface;
 
-class GetPropertiesResponseFactory extends AbstractResponseFactory
+class GetPropertyResponseFactory extends AbstractResponseFactory
 {
     public function createFromResponse(PsrResponseInterface $response): ResponseInterface
     {
@@ -20,20 +19,7 @@ class GetPropertiesResponseFactory extends AbstractResponseFactory
         }
 
         return new GetPropertiesResponse(
-            $this->generateProperties($data['data']['properties'])
+            $this->generateEntityFromArray($data['data']['property'])
         );
-    }
-
-    /**
-     * @return PropertyType[]
-     */
-    private function generateProperties(array $data): array
-    {
-        $properties = [];
-        foreach ($data as $property) {
-            $properties[] = $this->generateEntityFromArray($property);
-        }
-
-        return $properties;
     }
 }
