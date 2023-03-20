@@ -12,6 +12,13 @@ class GetPropertyRequest extends AbstractRequest
         'Content-Type' => 'application/json',
     ];
 
+    private int $propertyId;
+
+    public function __construct(string $propertyId)
+    {
+        $this->propertyId = $propertyId;
+    }
+
     public function getHttpMethod(): string
     {
         return Request::METHOD_POST;
@@ -38,7 +45,7 @@ class GetPropertyRequest extends AbstractRequest
             [
                 'operationName' => 'GET_PROPERTY',
                 'variables' => [
-                    'propertyId' => '',
+                    'propertyId' => $this->propertyId,
                 ],
                 'query' => 'query GET_PROPERTY($propertyId: Int!) {
                   property(id: $propertyId) {
