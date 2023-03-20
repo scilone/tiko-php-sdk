@@ -14,8 +14,8 @@ class RoomType implements \JsonSerializable
     private ?array $devices = null;
     private ?TemperatureType $temperature = null;
     private ?bool $hasTemperatureSchedule = null;
-    private $temperatureSchedule = null;
-    private $formattedTemperatureSchedule = null;
+    private array $temperatureSchedule = [];
+    private array $formattedTemperatureSchedule = [];
     private ?AdjustTemperatureType $adjustTemperature = null;
     private ?ConsumptionType $consumption = null;
     private ?int $id = null;

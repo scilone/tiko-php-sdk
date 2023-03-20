@@ -103,12 +103,32 @@ class GetPropertyRequest extends AbstractRequest
                     }
                     address {
                       id
+                      street
+                      number
+                      city
+                      zipCode
+                      timezone
+                      __typename
+                    }
+                    savings {
+                      ecomode
+                      photovoltaic
+                      tariff
+                      total
+                      __typename
+                    }
+                    selfConsumptionSettings {
+                      photovoltaic
+                      savings
+                      optimisationBoiler
+                      optimisationDevices
+                      optimisationExternalDevices
+                      optimisationEvc
                       __typename
                     }
                     __typename
                   }
-                }
-                ',
+                }',
             ]
         );
     }

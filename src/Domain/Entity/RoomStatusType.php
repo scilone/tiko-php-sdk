@@ -10,12 +10,12 @@ class RoomStatusType implements \JsonSerializable
 
     private ?bool $disconnected = null;
     private ?bool $heatingOperating = null;
-    private $heaterDisconnected = null;
-    private $temporaryAdjustment = null;
-    private $sensorModeActive = null;
-    private $sensorModeActiveUntil = null;
-    private $sensorDisconnected = null;
-    private $sensorBatteryLow = null;
+    private ?bool $heaterDisconnected = null;
+    private ?bool $temporaryAdjustment = null;
+    private ?bool $sensorModeActive = null;
+    private ?bool $sensorModeActiveUntil = null;
+    private ?bool $sensorDisconnected = null;
+    private ?bool $sensorBatteryLow = null;
 
     public function getDisconnected(): ?bool
     {
