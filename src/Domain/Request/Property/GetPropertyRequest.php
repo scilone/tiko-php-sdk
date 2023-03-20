@@ -2,7 +2,7 @@
 
 namespace Scilone\TikoSDK\Domain\Request\Property;
 
-use Scilone\TikoSDK\Domain\Factory\Property\GetPropertiesResponseFactory;
+use Scilone\TikoSDK\Domain\Factory\Property\GetPropertyResponseFactory;
 use Scilone\TikoSDK\Domain\Request\AbstractRequest;
 use Symfony\Component\HttpFoundation\Request;
 
@@ -34,9 +34,9 @@ class GetPropertyRequest extends AbstractRequest
         return [];
     }
 
-    public function getResponseFactory(): GetPropertiesResponseFactory
+    public function getResponseFactory(): GetPropertyResponseFactory
     {
-        return new GetPropertiesResponseFactory();
+        return new GetPropertyResponseFactory();
     }
 
     public function getBody(): ?string
